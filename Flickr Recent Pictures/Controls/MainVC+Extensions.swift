@@ -42,7 +42,7 @@ extension MainVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollec
         let yOffset = scrollView.contentOffset.y
         let contentHeight = scrollView.contentSize.height
 
-        if yOffset > contentHeight - scrollView.frame.height * 2 {
+        if yOffset > contentHeight - scrollView.frame.height * 1.2 {
             if !isFetched {
                 addMoreImage()
             }

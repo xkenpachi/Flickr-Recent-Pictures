@@ -25,9 +25,14 @@ class MainCell: UICollectionViewCell {
         super.init(frame: frame)
         
         self.addSubview(imageView)
+        imageView.frame = CGRect(origin: self.center, size: .zero)
     }
     
     func configCell(photo: Photo) {
+        
+        UIView.animate(withDuration: 1) {
+            self.imageView.frame = self.bounds
+        }
         
         let imageURL = "https://farm\(photo.farm).staticflickr.com/\(photo.server)/\(photo.id)_\(photo.secret)_m.jpg"
      

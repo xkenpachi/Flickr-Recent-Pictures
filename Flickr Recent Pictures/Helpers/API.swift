@@ -24,7 +24,7 @@ class API: NSObject {
     private var photoCount = 20
     
     func getRecentImages(pageNumber: Int, completion: @escaping ([Photo]) -> Void)  {
-        guard let url = URL(string: "https://www.flickr.com/services/rest/?method=flickr.photos.getRecent&api_key=c2f49b1d699840ba3ad14c3d115fb33b&per_page=\(photoCount)&page=\(pageNumber)&format=rest") else {return}
+        guard let url = URL(string: "https://www.flickr.com/services/rest/?method=flickr.photos.getRecent&api_key={your-key}&per_page=\(photoCount)&page=\(pageNumber)&format=rest") else {return}
         
         let req = URLRequest(url: url)
         
